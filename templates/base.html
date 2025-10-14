@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Blog{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+<!-- Navbar -->
+<nav class="border-b border-gray-200">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" class="text-xl font-semibold">MyBlog</a>
+        <div class="space-x-6">
+            <a href="/" class="hover:text-blue-600">Home</a>
+            <a href="/about" class="hover:text-blue-600">About</a>
+            <a href="/post" class="hover:text-blue-600">Post</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Content -->
+<main class="max-w-5xl mx-auto px-4 py-8">
+    {% block content %}{% endblock %}
+</main>
+
+<!-- Footer -->
+<footer class="border-t border-gray-200 py-6 text-center text-sm text-gray-500">
+    © 2025 MyBlog. All rights reserved.
+</footer>
+</body>
+</html>
