@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Blog{% endblock %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-white text-gray-900 transition-colors duration-300">
 <!-- Navbar -->
-<nav class="border-b border-gray-200">
+<nav class="max-w-4xl mx-auto px-4 border-b border-gray-300">
     <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="/" class="text-xl font-semibold">MyBlog</a>
+        <a href="/" class="text-xl font-semibold">Mr Abdukarim</a>
         <div class="space-x-6">
-            <a href="/" class="hover:text-blue-600">Home</a>
-            <a href="/about" class="hover:text-blue-600">About</a>
-            <a href="/post" class="hover:text-blue-600">Post</a>
+            <a href="/about" class="hover:text-gray-600 transition-underline duration-300">About me</a>
+            <a href="https://t.me/s/abdukarim_qarshiyev" target="_blank" class="hover:text-gray-600">Channel</a>
         </div>
     </div>
 </nav>
@@ -25,8 +28,9 @@
 </main>
 
 <!-- Footer -->
-<footer class="border-t border-gray-200 py-6 text-center text-sm text-gray-500">
-    © 2025 MyBlog. All rights reserved.
+<footer class="border-t absolute inset-x-0 bottom-0 h-16 border-gray-200 py-6 text-center text-sm text-gray-500">
+    &copy; 2025 Abdukarim Qarshiyev
 </footer>
+
 </body>
 </html>

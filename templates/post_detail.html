@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="max-w-4xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-2">{{ post.title }}</h1>
+    <p class="text-gray-500 text-sm mb-6">{{ post.created_at|date:"F j, Y" }}</p>
+
+    <div class="flex justify-between mb-6">
+        <a href="{% url 'home' %}" class="px-3 py-1 border rounded-lg text-sm hover:underline">← Back to Home</a>
+        <button id="toggle-lang" class="px-3 py-1 border rounded-lg text-sm">
+            Read in English
+        </button>
+    </div>
+
+    <div id="body-uz" class="prose max-w-none">{{ post.body|safe }}</div>
+    <div id="body-en" class="prose max-w-none hidden">{{ post.body_en|safe }}</div>
+</section>
+
+<script>
+    const uz = document.getElementById('body-uz');
+    const en = document.getElementById('body-en');
+    const btn = document.getElementById('toggle-lang');
+
+    btn.addEventListener('click', () => {
+      uz.classList.toggle('hidden');
+      en.classList.toggle('hidden');
+      btn.textContent = uz.classList.contains('hidden')
+        ? 'Read in Uzbek'
+        : 'Read in English';
+    });
+</script>
+{% endblock %}
